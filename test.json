@@ -1,0 +1,537 @@
+[
+  {
+    "Name": "Amy",
+    "CourseMarks": [
+      {
+        "CourseScore": 23,
+        "CourseName": "cs324"
+      },
+      {
+        "CourseScore": 23,
+        "CourseName": "ece124"
+      }
+    ],
+    "RollNo": 201401022
+  },
+  {
+    "Name": "Dhruv",
+    "CourseMarks": [
+      {
+        "CourseScore": 39,
+        "CourseName": "cs210"
+      },
+      {
+        "CourseScore": 83,
+        "CourseName": "ece124"
+      }
+    ],
+    "RollNo": 20141232
+  }
+][
+  ({
+    "Name": "PHILLIP",
+    "CourseMarks": [
+      {
+        "CourseName": "me119",
+        "CourseScore": 28
+      },
+      {
+        "CourseName": "ec904",
+        "CourseScore": 64
+      },
+      {
+        "CourseName": "ci325",
+        "CourseScore": 85
+      },
+      {
+        "CourseName": "cs570",
+        "CourseScore": 82
+      },
+      {
+        "CourseName": "cs431",
+        "CourseScore": 38
+      },
+      {
+        "CourseName": "me420",
+        "CourseScore": 72
+      }
+    ],
+    "RollNo": 201300023
+  },
+  {
+    "Name": "JEFFERY",
+    "CourseMarks": [
+      {
+        "CourseName": "cs125",
+        "CourseScore": 79
+      },
+      {
+        "CourseName": "ec224",
+        "CourseScore": 59
+      }
+    ],
+    "RollNo": 201300024
+  },
+  {
+    "Name": "ANGEL",
+    "CourseMarks": [
+      {
+        "CourseName": "cs431",
+        "CourseScore": 74
+      },
+      {
+        "CourseName": "ec224",
+        "CourseScore": 80
+      }
+    ],
+    "RollNo": 201300025
+  },
+  {
+    "Name": "EVELYN",
+    "CourseMarks": [
+      {
+        "CourseName": "cs125",
+        "CourseScore": 43
+      },
+      {
+        "CourseName": "me420",
+        "CourseScore": 36
+      },
+      {
+        "CourseName": "ec904",
+        "CourseScore": 49
+      }
+    ],
+    "RollNo": 201300026
+  },
+  {
+    "Name": "BRADLEY",
+    "CourseMarks": [
+      {
+        "CourseName": "me420",
+        "CourseScore": 79
+      },
+      {
+        "CourseName": "ci325",
+        "CourseScore": 85
+      },
+      {
+        "CourseName": "me119",
+        "CourseScore": 31
+      },
+      {
+        "CourseName": "cs481",
+        "CourseScore": 69
+      },
+      {
+        "CourseName": "cs125",
+        "CourseScore": 49
+      }
+    ],
+    "RollNo": 201300027
+  },
+  {
+    "Name": "DONNA",
+    "CourseMarks": [
+      {
+        "CourseName": "cs125",
+        "CourseScore": 43
+      },
+      {
+        "CourseName": "me119",
+        "CourseScore": 38
+      },
+      {
+        "CourseName": "ec904",
+        "CourseScore": 90
+      },
+      {
+        "CourseName": "cs431",
+        "CourseScore": 68
+      },
+      {
+        "CourseName": "ec224",
+        "CourseScore": 37
+      },
+      {
+        "CourseName": "cs570",
+        "CourseScore": 84
+      },
+      {
+        "CourseName": "cs481",
+        "CourseScore": 53
+      },
+      {
+        "CourseName": "ci325",
+        "CourseScore": 82
+      }
+    ],
+    "RollNo": 201300028
+  },
+  {
+    "Name": "TONY",
+    "CourseMarks": [
+      {
+        "CourseName": "cs565",
+        "CourseScore": 26
+      },
+      {
+        "CourseName": "ci325",
+        "CourseScore": 68
+      },
+      {
+        "CourseName": "me420",
+        "CourseScore": 26
+      },
+      {
+        "CourseName": "cs431",
+        "CourseScore": 26
+      },
+      {
+        "CourseName": "cs570",
+        "CourseScore": 78
+      },
+      {
+        "CourseName": "ec904",
+        "CourseScore": 74
+      },
+      {
+        "CourseName": "cs125",
+        "CourseScore": 38
+      },
+      {
+        "CourseName": "me119",
+        "CourseScore": 67
+      },
+      {
+        "CourseName": "ec224",
+        "CourseScore": 52
+      },
+      {
+        "CourseName": "cs481",
+        "CourseScore": 64
+      }
+    ],
+    "RollNo": 201300029
+  },
+  {
+    "Name": "MELINDA",
+    "CourseMarks": [
+      {
+        "CourseName": "cs570",
+        "CourseScore": 87
+      },
+      {
+        "CourseName": "ec904",
+        "CourseScore": 45
+      },
+      {
+        "CourseName": "cs481",
+        "CourseScore": 90
+      },
+      {
+        "CourseName": "me119",
+        "CourseScore": 88
+      }
+    ],
+    "RollNo": 201300030
+  },
+  {
+    "Name": "RONALD",
+    "CourseMarks": [
+      {
+        "CourseName": "cs431",
+        "CourseScore": 94
+      },
+      {
+        "CourseName": "me119",
+        "CourseScore": 36
+      },
+      {
+        "CourseName": "cs570",
+        "CourseScore": 77
+      },
+      {
+        "CourseName": "me420",
+        "CourseScore": 36
+      },
+      {
+        "CourseName": "ec224",
+        "CourseScore": 73
+      },
+      {
+        "CourseName": "cs125",
+        "CourseScore": 80
+      },
+      {
+        "CourseName": "cs481",
+        "CourseScore": 73
+      }
+    ],
+    "RollNo": 201300031
+  },
+  {
+    "Name": "HOLLY",
+    "CourseMarks": [
+      {
+        "CourseName": "cs565",
+        "CourseScore": 33
+      },
+      {
+        "CourseName": "cs481",
+        "CourseScore": 55
+      },
+      {
+        "CourseName": "ec904",
+        "CourseScore": 75
+      },
+      {
+        "CourseName": "cs431",
+        "CourseScore": 64
+      },
+      {
+        "CourseName": "ec224",
+        "CourseScore": 94
+      },
+      {
+        "CourseName": "me420",
+        "CourseScore": 71
+      },
+      {
+        "CourseName": "cs125",
+        "CourseScore": 35
+      },
+      {
+        "CourseName": "cs570",
+        "CourseScore": 39
+      }
+    ],
+    "RollNo": 201300032
+  },
+  {
+    "Name": "RANDY",
+    "CourseMarks": [
+      {
+        "CourseName": "cs431",
+        "CourseScore": 74
+      },
+      {
+        "CourseName": "cs565",
+        "CourseScore": 81
+      },
+      {
+        "CourseName": "cs481",
+        "CourseScore": 74
+      },
+      {
+        "CourseName": "ec224",
+        "CourseScore": 44
+      },
+      {
+        "CourseName": "me420",
+        "CourseScore": 77
+      },
+      {
+        "CourseName": "cs125",
+        "CourseScore": 89
+      },
+      {
+        "CourseName": "cs570",
+        "CourseScore": 65
+      },
+      {
+        "CourseName": "ci325",
+        "CourseScore": 85
+      },
+      {
+        "CourseName": "me119",
+        "CourseScore": 69
+      },
+      {
+        "CourseName": "ec904",
+        "CourseScore": 66
+      }
+    ],
+    "RollNo": 201300033
+  },
+  {
+    "Name": "JOHNNIE",
+    "CourseMarks": [
+      {
+        "CourseName": "cs570",
+        "CourseScore": 35
+      },
+      {
+        "CourseName": "ci325",
+        "CourseScore": 91
+      },
+      {
+        "CourseName": "cs481",
+        "CourseScore": 37
+      },
+      {
+        "CourseName": "cs431",
+        "CourseScore": 33
+      },
+      {
+        "CourseName": "cs565",
+        "CourseScore": 69
+      },
+      {
+        "CourseName": "cs125",
+        "CourseScore": 27
+      }
+    ],
+    "RollNo": 201300034
+  },
+  {
+    "Name": "JEANETTE",
+    "CourseMarks": [
+      {
+        "CourseName": "ec904",
+        "CourseScore": 94
+      },
+      {
+        "CourseName": "ci325",
+        "CourseScore": 94
+      },
+      {
+        "CourseName": "cs125",
+        "CourseScore": 27
+      },
+      {
+        "CourseName": "cs565",
+        "CourseScore": 71
+      },
+      {
+        "CourseName": "ec224",
+        "CourseScore": 28
+      },
+      {
+        "CourseName": "me420",
+        "CourseScore": 36
+      },
+      {
+        "CourseName": "cs431",
+        "CourseScore": 64
+      },
+      {
+        "CourseName": "cs570",
+        "CourseScore": 35
+      },
+      {
+        "CourseName": "cs481",
+        "CourseScore": 25
+      }
+    ],
+    "RollNo": 201300035
+  },
+  {
+    "Name": "LESTER",
+    "CourseMarks": [
+      {
+        "CourseName": "me119",
+        "CourseScore": 80
+      },
+      {
+        "CourseName": "cs565",
+        "CourseScore": 48
+      },
+      {
+        "CourseName": "cs570",
+        "CourseScore": 61
+      },
+      {
+        "CourseName": "cs481",
+        "CourseScore": 56
+      }
+    ],
+    "RollNo": 201300036
+  },
+  {
+    "Name": "SYLVIA",
+    "CourseMarks": [
+      {
+        "CourseName": "ec224",
+        "CourseScore": 29
+      },
+      {
+        "CourseName": "cs431",
+        "CourseScore": 27
+      },
+      {
+        "CourseName": "me420",
+        "CourseScore": 29
+      },
+      {
+        "CourseName": "cs570",
+        "CourseScore": 43
+      },
+      {
+        "CourseName": "ci325",
+        "CourseScore": 80
+      },
+      {
+        "CourseName": "cs125",
+        "CourseScore": 58
+      }
+    ],
+    "RollNo": 201300037
+  },
+  {
+    "Name": "VICTOR",
+    "CourseMarks": [
+      {
+        "CourseName": "cs570",
+        "CourseScore": 70
+      },
+      {
+        "CourseName": "me119",
+        "CourseScore": 45
+      },
+      {
+        "CourseName": "ci325",
+        "CourseScore": 36
+      },
+      {
+        "CourseName": "ec224",
+        "CourseScore": 82
+      },
+      {
+        "CourseName": "me420",
+        "CourseScore": 31
+      },
+      {
+        "CourseName": "ec904",
+        "CourseScore": 44
+      },
+      {
+        "CourseName": "cs125",
+        "CourseScore": 45
+      },
+      {
+        "CourseName": "cs481",
+        "CourseScore": 77
+      },
+      {
+        "CourseName": "cs565",
+        "CourseScore": 33
+      },
+      {
+        "CourseName": "cs431",
+        "CourseScore": 38
+      }
+    ],
+    "RollNo": 201300038
+  },
+  {
+    "Name": "JORGE",
+    "CourseMarks": [
+      {
+        "CourseName": "cs570",
+        "CourseScore": 75
+      }
+    ],
+    "RollNo": 201300039
+  })
+]
