@@ -80,7 +80,7 @@ def parse_json_to_file(file_name):
     output_file = open("output_json.txt", "w")
     n = output_file.write(text_file)
     output_file.close()
-    
+
 
 
 
@@ -89,7 +89,7 @@ def parse_json_to_file(file_name):
 
 #parse_file_to_json("input.txt")
 
-parse_json_to_file("result.json")
+#parse_json_to_file("result.json")
 
 
 # if (len(sys.argv)!=3 ):

@@ -46,14 +46,31 @@ def parse_file_to_proto(file_name):
     return 
 
 def parse_proto_to_file(file_name):
-    result=proto.Result()
-    f = open(file_name, "rb")
-    .ParseFromString(f.read())
+   text_file=""
+   result = proto.Result()
+   f = open(file_name, "rb")
+   result.ParseFromString(f.read())
+   f.close()
+   for student in result.student:
+       i=str(student.id)
+       tid=i[0:3]+'-'+i[3:5]+'-'+i[5:]+','
+       text_file+=tid
+       text_file+=student.lastname+','
+       text_file+=student.firstname
+       if student.email:
+           text_file+=','+student.email
+       for course in student.marks:
+            text_file+=':'+course.name+','+str(course.score)
+       text_file+='\n'
+    
+   output_file=open("output_protobuf.txt","w")
+   n=output_file.write(text_file)
+   output_file.close()
 
-    return
 
-def Get_Size(file_name):
-    return 
+
+
+
 
 #parse_file_to_proto("input.txt")
 
