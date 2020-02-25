@@ -59,10 +59,38 @@ def parse_file_to_json(file_name):
 
     
 def parse_json_to_file(file_name):
+    json_dict_arr=None
+    text_file=""
+    with open('result.json', 'r') as f:
+        json_dict_arr = json.load(f)
     
-    return
+    for json_dict in json_dict_arr:
+        id=str(json_dict["id"])
+        tid=id[0:3]+'-'+id[3:5]+'-'+id[5:]+','
+        text_file+=tid
+        text_file+=json_dict["lastname"]+','
+        text_file+=json_dict["firstname"]
+        if json_dict.get("email"):
+            text_file+=','+json_dict["email"]
+        course_marks=json_dict["CourseMarks"]
+        for c in course_marks:
+            text_file+=':'+c["CourseName"]+','+str(c["CourseScore"])
+        text_file+='\n'
+    
+    output_file = open("output_json.txt", "w")
+    n = output_file.write(text_file)
+    output_file.close()
+    
 
-parse_file_to_json("input.txt")
+
+
+        
+
+
+#parse_file_to_json("input.txt")
+
+parse_json_to_file("result.json")
+
 
 # if (len(sys.argv)!=3 ):
 #     print('invalid amount of arg parameters')
