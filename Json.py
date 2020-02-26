@@ -1,7 +1,8 @@
 import sys
 import json
 import pickle
-
+import argparse
+from optparse import OptionParser  
 
 from collections import OrderedDict
 #
@@ -83,23 +84,17 @@ def parse_json_to_file(file_name):
 
 
 
+parser = argparse.ArgumentParser()
+parser.add_argument('-j','--jsonFile',help='Input File',required=False)
+parser.add_argument('-s',help='Serialization Flag',action='store_true')
+parser.add_argument('-d',help='Deserialization Flag',action='store_true')
 
-        
+options= vars(parser.parse_args())
 
+print(options)
+nameFile=options['jsonFile']
+if options['s'] and nameFile:
+    parse_file_to_json(nameFile)
+if options['d'] and nameFile:
+    parse_json_to_file(nameFile)
 
-#parse_file_to_json("input.txt")
-
-#parse_json_to_file("result.json")
-
-
-# if (len(sys.argv)!=3 ):
-#     print('invalid amount of arg parameters')
-#     exit()
-# if (int(sys.argv[1]) == 1):#may not be argv[1] instead argv[0]
-#     parse_file_to_json(sys.argv[2])
-# if (int(sys.argv[1]) == 2):
-#     parse_json_to_file(sys.argv[2])
-# if (int(sys.argv[1]) == 3):
-#     parse_file_to_json(sys.argv[2])
-#     parse_json_to_file("results.json")
-#     #time done here 

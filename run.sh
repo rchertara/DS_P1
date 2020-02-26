@@ -1,25 +1,28 @@
 #!/bin/bash
 
-if [ $1 = '-c' ]
+if [ $1 = '-s' ]
 then
     ##Compile the code
-elif [ $1 = '-s' ]
-then
     if [ $2 = '-p' ]
     then
+
+    python3 proto.py -s -p $3
         ###Serialize Protobuf
     elif [ $2 = '-j' ]
     then
         ##Serialize JSON
+    python3 Json.py -s -j $3
     fi
 elif [ $1 = '-d' ]
 then
     if [ $2 = '-j' ]
     then
+    python3 Json.py -d -j $3
         ##Deserialize JSON
     elif [ $2 = '-p' ]
     then
         ##Deserialize Protobuf
+    python3 proto.py -d -p $3
     fi
 elif [ $1 = '-t' ]
 then

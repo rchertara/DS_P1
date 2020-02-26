@@ -1,5 +1,6 @@
 import sys
 import protocol_defn_pb2 as proto
+import argparse
 
 total_time_s=0
 total_time_d=0
@@ -70,11 +71,21 @@ def parse_proto_to_file(file_name):
 
 
 
+parser = argparse.ArgumentParser()
+parser.add_argument('-p','--protoFile',help='Input File',required=False)
+parser.add_argument('-s',help='Serialization Flag',action='store_true')
+parser.add_argument('-d',help='Deserialization Flag',action='store_true')
+
+options= vars(parser.parse_args())
+
+print(options)
+nameFile=options['protoFile']
+if options['s'] and nameFile:
+    parse_file_to_proto(nameFile)
+if options['d'] and nameFile:
+    parse_proto_to_file(nameFile)
 
 
-#parse_file_to_proto("input.txt")
 
-parse_proto_to_file("result_protobuf.proto")
 
-    
-    #time done here 
+
