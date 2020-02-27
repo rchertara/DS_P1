@@ -34,7 +34,7 @@ then
     elif [ $2 = '-p' ]
     then
         ##Metric measurment protobuf
-        python3 Json.py -t -p $3
+        python3 proto.py -t -p $3
         
     fi
 fi

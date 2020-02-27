@@ -91,7 +91,6 @@ parser.add_argument('-d',help='Deserialization Flag',action='store_true')
 parser.add_argument('-t',help="Time flag",action='store_true')
 options= vars(parser.parse_args())
 
-print(options)
 nameFile=options['protoFile']
 filestat=os.stat(nameFile)
 
