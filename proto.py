@@ -1,6 +1,8 @@
 import sys
 import protocol_defn_pb2 as proto
 import argparse
+import os
+import time
 
 total_time_s=0
 total_time_d=0
@@ -26,6 +28,7 @@ def add_courseMarks(marks,data):
 def parse_file_to_proto(file_name):
     result = proto.Result()
     f = open(file_name, "r")
+    start=time.time()
     count=0
     for line in f:
         firstPair=True
@@ -39,12 +42,16 @@ def parse_file_to_proto(file_name):
                 add_courseMarks(result.student[count].marks.add(),fieldArr)
         
         count+=1#next student
+    end=time.time()
     f.close()
-
+    
     wf = open("result_protobuf.proto", "wb")
     wf.write(result.SerializeToString())
     wf.close()
-    return 
+
+    diff=end-start
+    millis = int(round( diff * 1000))
+    return millis
 
 def parse_proto_to_file(file_name):
    text_file=""
@@ -52,6 +59,7 @@ def parse_proto_to_file(file_name):
    f = open(file_name, "rb")
    result.ParseFromString(f.read())
    f.close()
+   start=time.time()
    for student in result.student:
        i=str(student.id)
        tid=i[0:3]+'-'+i[3:5]+'-'+i[5:]+','
@@ -68,6 +76,11 @@ def parse_proto_to_file(file_name):
    n=output_file.write(text_file)
    output_file.close()
 
+   end=time.time()
+   diff=end-start
+   millis = int(round( diff * 1000))
+   return millis
+
 
 
 
@@ -75,15 +88,30 @@ parser = argparse.ArgumentParser()
 parser.add_argument('-p','--protoFile',help='Input File',required=False)
 parser.add_argument('-s',help='Serialization Flag',action='store_true')
 parser.add_argument('-d',help='Deserialization Flag',action='store_true')
-
+parser.add_argument('-t',help="Time flag",action='store_true')
 options= vars(parser.parse_args())
 
 print(options)
 nameFile=options['protoFile']
+filestat=os.stat(nameFile)
+
 if options['s'] and nameFile:
     parse_file_to_proto(nameFile)
+    print("Serialized Proto")
 if options['d'] and nameFile:
     parse_proto_to_file(nameFile)
+    print("De-Serialized Json")
+if options['t'] and nameFile.endswith('.proto'):
+    time_d_p=parse_proto_to_file(nameFile)
+    print("File Size in bits:" +str(8*filestat.st_size))
+    rate_d_p=(filestat.st_size*1000) / time_d_p
+    print("Time of JSON De-serialization:"+str(time_d_p)+',Rate of De-Serialization:'+str(rate_d_p))
+if options['t'] and nameFile.endswith('.txt'):
+    time_s_p=parse_file_to_proto(nameFile)
+    print("File Size in bits:" +str(8*filestat.st_size))
+    rate_s_p= (filestat.st_size *1000) / time_s_p
+    print("Time of JSON Serialization:"+str(time_s_p)+',Rate of Serialization:'+str(rate_s_p))
+
 
 
 
