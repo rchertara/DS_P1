@@ -119,10 +119,10 @@ if options['d'] and nameFile:
 if options['t'] and nameFile.endswith('.json'):
     time_d_j=parse_json_to_file(nameFile)
     print("File Size in bits:" +str(8*filestat.st_size))
-    rate_d_j=(filestat.st_size*1000) / time_d_j
+    rate_d_j=(filestat.st_size*8) / time_d_j
     print("Time of JSON De-serialization:"+str(time_d_j)+',Rate of De-Serialization:'+str(rate_d_j))
 if options['t'] and nameFile.endswith('.txt'):
     time_s_j=parse_file_to_json(nameFile)
     print("File Size in bits:" +str(8*filestat.st_size))
-    rate_s_j= (filestat.st_size *1000) / time_s_j
+    rate_s_j= (filestat.st_size *8) / time_s_j
     print("Time of JSON Serialization:"+str(time_s_j)+',Rate of Serialization:'+str(rate_s_j))

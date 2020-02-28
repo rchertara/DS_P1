@@ -71,12 +71,13 @@ def parse_proto_to_file(file_name):
        for course in student.marks:
             text_file+=':'+course.name+','+str(course.score)
        text_file+='\n'
-    
+  
+   end=time.time() 
    output_file=open("output_protobuf.txt","w")
    n=output_file.write(text_file)
    output_file.close()
 
-   end=time.time()
+   
    diff=end-start
    millis = int(round( diff * 1000))
    return millis
@@ -103,16 +104,10 @@ if options['d'] and nameFile:
 if options['t'] and nameFile.endswith('.proto'):
     time_d_p=parse_proto_to_file(nameFile)
     print("File Size in bits:" +str(8*filestat.st_size))
-    rate_d_p=(filestat.st_size*1000) / time_d_p
+    rate_d_p=(filestat.st_size*8) / time_d_p
     print("Time of JSON De-serialization:"+str(time_d_p)+',Rate of De-Serialization:'+str(rate_d_p))
 if options['t'] and nameFile.endswith('.txt'):
     time_s_p=parse_file_to_proto(nameFile)
     print("File Size in bits:" +str(8*filestat.st_size))
-    rate_s_p= (filestat.st_size *1000) / time_s_p
+    rate_s_p= (filestat.st_size *8) / time_s_p
     print("Time of JSON Serialization:"+str(time_s_p)+',Rate of Serialization:'+str(rate_s_p))
-
-
-
-
-
-
