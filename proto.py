@@ -2,7 +2,7 @@ import sys
 import protocol_defn_pb2 as proto
 import argparse
 import os
-import time
+import timeit
 
 total_time_s=0
 total_time_d=0
@@ -28,7 +28,7 @@ def add_courseMarks(marks,data):
 def parse_file_to_proto(file_name):
     result = proto.Result()
     f = open(file_name, "r")
-    start=time.time()
+    start=timeit.default_timer()
     count=0
     for line in f:
         firstPair=True
@@ -42,7 +42,7 @@ def parse_file_to_proto(file_name):
                 add_courseMarks(result.student[count].marks.add(),fieldArr)
         
         count+=1#next student
-    end=time.time()
+    end=timeit.default_timer()
     f.close()
     
     wf = open("result_protobuf.proto", "wb")
@@ -50,7 +50,7 @@ def parse_file_to_proto(file_name):
     wf.close()
 
     diff=end-start
-    millis = int(round( diff * 1000))
+    millis = diff*1000
     return millis
 
 def parse_proto_to_file(file_name):
@@ -59,7 +59,7 @@ def parse_proto_to_file(file_name):
    f = open(file_name, "rb")
    result.ParseFromString(f.read())
    f.close()
-   start=time.time()
+   start=timeit.default_timer()
    for student in result.student:
        i=str(student.id)
        tid=i[0:3]+'-'+i[3:5]+'-'+i[5:]+','
@@ -72,14 +72,14 @@ def parse_proto_to_file(file_name):
             text_file+=':'+course.name+','+str(course.score)
        text_file+='\n'
   
-   end=time.time() 
+   end=timeit.default_timer() 
    output_file=open("output_protobuf.txt","w")
    n=output_file.write(text_file)
    output_file.close()
 
    
    diff=end-start
-   millis = int(round( diff * 1000))
+   millis = diff*1000
    return millis
 
 
@@ -110,4 +110,4 @@ if options['t'] and nameFile.endswith('.txt'):
     time_s_p=parse_file_to_proto(nameFile)
     print("File Size in bits:" +str(8*filestat.st_size))
     rate_s_p= (filestat.st_size *8) / time_s_p
-    print("Time of Proto Serialization:"+str(time_s_p)+',Rate of Serialization:'+str(rate_s_p))
+    print("Time of Proto Serialization:"+str(time_s_p)+',Rate of Serialization(bits/ms):'+str(rate_s_p))
