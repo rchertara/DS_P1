@@ -57,6 +57,7 @@ def parse_file_to_json(file_name):
         jsonArr.append(json_record)
     
     end=timeit.default_timer()
+    
     diff=end-start
     with open('result.json', 'w') as wf:
         json.dump(jsonArr, wf,indent=4)
@@ -69,10 +70,11 @@ def parse_file_to_json(file_name):
 def parse_json_to_file(file_name):
     json_dict_arr=None
     text_file=""
+    start=timeit.default_timer()
     with open('result.json', 'r') as f:
         json_dict_arr = json.load(f)
     
-    start=timeit.default_timer()
+    
     for json_dict in json_dict_arr:
         id=str(json_dict["id"])
         tid=id[0:3]+'-'+id[3:5]+'-'+id[5:]+','
@@ -105,10 +107,6 @@ options= vars(parser.parse_args())
 
 nameFile=options['jsonFile']
 filestat=os.stat(nameFile)
-time_s_j=0
-time_d_j=0
-
-
 
 if options['s'] and nameFile:
     parse_file_to_json(nameFile)
@@ -120,9 +118,9 @@ if options['t'] and nameFile.endswith('.json'):
     time_d_j=parse_json_to_file(nameFile)
     print("File Size in bits:" +str(8*filestat.st_size))
     rate_d_j=(filestat.st_size*8) / time_d_j
-    print("Time of JSON De-serialization:"+str(time_d_j)+',Rate of De-Serialization(bits/ms):'+str(rate_d_j))
+    print("Time of JSON De-serialization(ms):"+str(time_d_j)+',Rate of De-Serialization(bits/ms):'+str(rate_d_j))
 if options['t'] and nameFile.endswith('.txt'):
     time_s_j=parse_file_to_json(nameFile)
     print("File Size in bits:" +str(8*filestat.st_size))
     rate_s_j= (filestat.st_size *8) / time_s_j
-    print("Time of JSON Serialization:"+str(time_s_j)+',Rate of Serialization(bits/ms):'+str(rate_s_j))
+    print("Time of JSON Serialization(ms):"+str(time_s_j)+',Rate of Serialization(bits/ms):'+str(rate_s_j))
