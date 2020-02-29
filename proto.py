@@ -44,7 +44,7 @@ def parse_file_to_proto(file_name):
         count+=1#next student
     end=timeit.default_timer()
     f.close()
-    wf = open("result_protobuf.proto", "wb")
+    wf = open("result_protobuf", "wb")
     wf.write(result.SerializeToString())
     wf.close()
 
@@ -101,7 +101,7 @@ if options['s'] and nameFile:
 if options['d'] and nameFile:
     parse_proto_to_file(nameFile)
     print("De-Serialized Proto")
-if options['t'] and nameFile.endswith('.proto'):
+if options['t'] and nameFile.endswith('_protobuf'):
     time_d_p=parse_proto_to_file(nameFile)
     print("File Size in bits:" +str(8*filestat.st_size))
     rate_d_p=(filestat.st_size*8) / time_d_p
